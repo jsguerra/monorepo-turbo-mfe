@@ -1,6 +1,6 @@
-# Turborepo starter
+# Monorepo using Turborepo
 
-This is an official npm starter turborepo.
+This is a monorepo using Turoborepo and is setup as a microfrontend.
 
 ## What's inside?
 
@@ -8,9 +8,9 @@ This turborepo uses [npm](https://www.npmjs.com/) as a package manager. It inclu
 
 ### Apps and Packages
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
+- `frontend`: a [Next.js](https://nextjs.org/) app
+- `blog`: another [Next.js](https://nextjs.org/) app
+- `design-system`: a stub React component library shared by both `frontend` and `blog` applications
 - `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `tsconfig`: `tsconfig.json`s used throughout the monorepo
 
@@ -42,24 +42,15 @@ cd my-turborepo
 npm run dev
 ```
 
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your turborepo:
-
-```
-npx turbo link
-```
+## Reference Repos
+Repositories and reference sites/pages for this build:
+- [Turborepo](https://turbo.build/repo/docs/handbook/package-installation)
+- [Microfrontends Vercel Github](https://github.com/vercel/examples/tree/main/solutions/microfrontends)
+- [Monorepo Vercel Github](https://github.com/vercel/examples/tree/main/solutions/monorepo)
+- [Multi Zones Repo](https://github.com/vercel/next.js/tree/canary/examples/with-zones)
+- [Microfrontends using Next.js and Module Federation](https://github.com/schalela/mf-nextjs)
+- [Module Federation Next.js 13](https://github.com/module-federation/module-federation-examples/tree/master/nextjs-v13)
+- [Netlify Monorepos Docs](https://docs.netlify.com/configure-builds/monorepos/)
 
 ## Useful Links
 
