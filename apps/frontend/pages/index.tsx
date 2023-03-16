@@ -6,6 +6,7 @@ export default function Web() {
     <div>
       <h1>Web</h1>
       <Link href="/blog">Blog</Link>
+      <h2>The button below is imported from the shared packages</h2>
       <p>
         <Button />
       </p>
