@@ -1,0 +1,23 @@
+.site-header {
+  box-shadow: 0.0145rem 0.029rem 0.174rem #1b283204, 0.0335rem 0.067rem 0.402rem #1b283206, 0.0625rem 0.125rem 0.75rem #1b283208, 0.1125rem 0.225rem 1.35rem #1b283209, 0.2085rem 0.417rem 2.502rem #1b28320b, 0.5rem 1rem 6rem #1b28320f, 0 0 0 0.0625rem #1b283204;
+  padding: 20px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav a {
+  margin-right: 20px;
+}
+
+.nav a:last-child {
+  margin-right: 0;
+}
+
+.nav a:focus,
+.nav a:hover {
+  text-decoration: underline;
+}

@@ -6,9 +6,8 @@ import type { ReactElement } from "react";
 
 export default function Home() {
   return (
-    <div>
+    <div className="container">
       <h1>Frontend App</h1>
-      <Link href="/blog">Blog</Link>
       <h2>The button below is imported from the shared packages</h2>
       <p>
         <Button />
