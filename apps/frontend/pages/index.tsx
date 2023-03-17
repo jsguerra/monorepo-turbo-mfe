@@ -1,10 +1,13 @@
 import { Button } from "design-system";
 import Link from "next/link";
+import Layout from "../components/layout/Layout";
 
-export default function Web() {
+import type { ReactElement } from "react";
+
+export default function Home() {
   return (
     <div>
-      <h1>Web</h1>
+      <h1>Frontend App</h1>
       <Link href="/blog">Blog</Link>
       <h2>The button below is imported from the shared packages</h2>
       <p>
@@ -13,3 +16,7 @@ export default function Web() {
     </div>
   );
 }
+
+Home.getLayout = function getLayout(page: ReactElement) {
+  return <Layout>{page}</Layout>;
+};
