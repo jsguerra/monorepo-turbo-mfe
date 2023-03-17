@@ -10,7 +10,7 @@ module.exports = {
         new NextFederationPlugin({
           name: "frontend",
           remotes: {
-            blog: `blog@http://localhost:3001/_next/static/${
+            docs: `blog@http://localhost:3002/_next/static/${
               isServer ? "ssr" : "chunks"
             }/remoteEntry.js`,
           },
