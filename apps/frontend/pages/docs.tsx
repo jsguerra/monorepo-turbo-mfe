@@ -4,13 +4,14 @@
 
 // export default Blog;
 
-import React from "react";
+import dynamic from "next/dynamic";
 import Layout from "../components/layout/Layout";
 
 import type { ReactElement } from "react";
 
 export default function Docs() {
-  return <div>docs</div>;
+  const DocsPage = dynamic(() => import("docs/pages/index"), { ssr: false });
+  return <DocsPage />;
 }
 
 Docs.getLayout = function getLayout(page: ReactElement) {
