@@ -17,10 +17,10 @@ body > div {
   min-height: 100%;
 }
 
-a {
+/* a {
   color: inherit;
   text-decoration: none;
-}
+} */
 
 main {
   padding: 60px 20px;
