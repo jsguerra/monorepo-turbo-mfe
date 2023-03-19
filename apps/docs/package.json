@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@module-federation/nextjs-mf": "^6.2.0",
+    "@module-federation/nextjs-mf": "^6.2.1",
     "design-system": "*",
     "next": "^13.1.1",
     "react": "^18.2.0",
