@@ -1,6 +1,7 @@
 const { NextFederationPlugin } = require("@module-federation/nextjs-mf");
 
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   reactStrictMode: true,
   transpilePackages: ["design-system"],
   webpack: (config, options) => {
@@ -10,11 +11,14 @@ module.exports = {
         new NextFederationPlugin({
           name: "docs",
           remotes: {
-            frontend: `frontend@http://localhost:3000/_next/static/${
+            frontend: `frontend@https://localhost:3000/_next/static/${
               isServer ? "ssr" : "chunks"
             }/remoteEntry.js`,
           },
           filename: "static/chunks/remoteEntry.js",
+          exposes: {
+            "./fetchItems": "./components/FetchItems.tsx",
+          },
           extraOptions: {
             exposePages: true,
           },
@@ -23,3 +27,5 @@ module.exports = {
     return config;
   },
 };
+
+module.exports = nextConfig;
