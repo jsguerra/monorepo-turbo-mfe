@@ -1,0 +1,6 @@
+.grid {
+  display: grid;
+  grid-template-columns: 8fr 4fr;
+  gap: 10px;
+  max-width: 970px;
+}
