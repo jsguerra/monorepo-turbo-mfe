@@ -11,7 +11,7 @@ const nextConfig = {
         new NextFederationPlugin({
           name: "docs",
           remotes: {
-            frontend: `frontend@https://localhost:3000/_next/static/${
+            frontend: `frontend@https://monorepo-frontend.netlify.app/_next/static/${
               isServer ? "ssr" : "chunks"
             }/remoteEntry.js`,
           },

@@ -1,6 +1,6 @@
 const { NextFederationPlugin } = require("@module-federation/nextjs-mf");
 // This variable can reside in a .env file
-const BLOG_URL = "http://localhost:3001/";
+const BLOG_URL = "https://monorepo-blog.netlify.app/";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -27,10 +27,10 @@ const nextConfig = {
     const nextFederationConfig = {
       name: "frontend",
       remotes: {
-        blog: `blog@http://localhost:3001/_next/static/${
+        blog: `blog@https://monorepo-blog.netlify.app/_next/static/${
           isServer ? "ssr" : "chunks"
         }/remoteEntry.js`,
-        docs: `docs@http://localhost:3002/_next/static/${
+        docs: `docs@https://monorepo-docs.netlify.app/_next/static/${
           isServer ? "ssr" : "chunks"
         }/remoteEntry.js`,
       },

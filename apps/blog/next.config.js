@@ -10,9 +10,9 @@ const nextConfig = {
     (config.experiments = { layers: true, topLevelAwait: true }),
       config.plugins.push(
         new NextFederationPlugin({
-          name: "docs",
+          name: "blog",
           remotes: {
-            frontend: `frontend@https://localhost:3000/_next/static/${
+            frontend: `frontend@https://monorepo-frontend.netlify.app/_next/static/${
               isServer ? "ssr" : "chunks"
             }/remoteEntry.js`,
           },
