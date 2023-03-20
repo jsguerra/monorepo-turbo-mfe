@@ -6,12 +6,20 @@ interface People {
 
 const FetchItems = () => {
   const [list, setList] = useState<People[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   const fetchData = async () => {
-    const res = await fetch(`https://swapi.dev/api/people`);
-    const data = await res.json();
+    try {
+      setIsLoading(true);
+      const res = await fetch(`https://swapi.dev/api/people`);
+      const data = await res.json();
 
-    setList(data.results);
+      setList(data.results);
+      setIsLoading(false);
+    } catch (error) {
+      setIsLoading(false);
+      console.error(error);
+    }
   };
 
   useEffect(() => {
@@ -20,6 +28,7 @@ const FetchItems = () => {
 
   return (
     <ul style={{ textAlign: "left" }}>
+      {isLoading && <p>Loading...</p>}
       {list.map((post: any) => (
         <li key={post.name}>{post.name}</li>
       ))}
