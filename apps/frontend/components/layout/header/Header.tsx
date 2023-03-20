@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header className={Styles["site-header"]}>
       <div className={`${Styles["header-container"]} container`}>
-        <span className={Styles.logo}>Site Header</span>
+        <Link href="/"><span className={Styles.logo}>Site Header</span></Link>
         <nav className={Styles.nav}>
           <Link href="/">Home</Link>
           <Link href="/blog">Blog</Link>

@@ -3,6 +3,15 @@
   padding: 20px;
 }
 
+.site-header a {
+  text-decoration: none;
+}
+
+.site-header a:focus,
+.site-header a:hover {
+  text-decoration: underline;
+}
+
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -11,14 +20,8 @@
 
 .nav a {
   margin-right: 20px;
-  text-decoration: none;
 }
 
 .nav a:last-child {
   margin-right: 0;
-}
-
-.nav a:focus,
-.nav a:hover {
-  text-decoration: underline;
 }

@@ -31,8 +31,7 @@ export default function Home() {
             internal page in the Frontend App which dynamically loads content
             created in the remote Docs App.
           </p>
-          <p>The button below is imported from the shared packages</p>
-          <h3>The Button shared component</h3>
+          <h2>Shared Components</h2>
           <p>
             The button is a shared React.js component that resides in the repos
             packages folder. It represents an example of creating a UI library
@@ -59,6 +58,7 @@ export default function Home() {
           This content is fed from a shared component from the Docs App using{" "}
           <strong>Module Federation</strong>.
         </p>
+        <p>Data comes from a remote API. You may see a Loading text briefly.</p>
         <FetchItem />
       </aside>
     </div>
