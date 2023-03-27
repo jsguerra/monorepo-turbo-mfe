@@ -1,6 +1,6 @@
 const { NextFederationPlugin } = require("@module-federation/nextjs-mf");
 // This variable can reside in a .env file
-const BLOG_URL = "https://monorepo-blog.netlify.app/";
+const BLOG_URL = "https://monorepo-blog.netlify.app";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
