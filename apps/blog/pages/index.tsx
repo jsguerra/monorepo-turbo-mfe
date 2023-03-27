@@ -1,6 +1,6 @@
 import { Button } from "design-system";
 
-export default function Docs() {
+export default function Home() {
   return (
     <div style={{maxWidth: "600px", margin: "auto"}}>
       <h1>The Blog using Multi Zone</h1>
