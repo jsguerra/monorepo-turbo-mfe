@@ -1,23 +1,25 @@
 const { NextFederationPlugin } = require("@module-federation/nextjs-mf");
-// This variable can reside in a .env file
-const BLOG_URL = "https://monorepo-blog.netlify.app";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  transpilePackages: ["design-system"],
   async rewrites() {
     return [
       {
-        source: "/blog",
-        destination: `${BLOG_URL}/blog`,
+        source: '/:path*',
+        destination: `/:path*`,
       },
       {
-        source: "/blog/:path*",
-        destination: `${BLOG_URL}/blog/:path*`,
+        source: '/blog',
+        destination: 'https://monorepo-blog.netlify.app/blog/',
       },
-    ];
+      {
+        source: '/blog/:path*',
+        destination: 'https://monorepo-blog.netlify.app/blog/:path*',
+      },
+    ]
   },
+  transpilePackages: ["design-system"],
   webpack: (config, options) => {
     const { isServer } = options;
     const nextFederationConfig = {
